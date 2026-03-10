@@ -24,7 +24,7 @@ while True:
                 print(f"{i}. {tarea}")
     elif opcion == "2":
         nueva_tarea = input("Escribe la nueva tarea: ")
-        if nueva_tarea in tareas:
+        if nueva_tarea.lower() in [t.lower() for t in tareas]:
             print ("Esa tarea ya existe.")
         else:
             tareas.append(nueva_tarea)
