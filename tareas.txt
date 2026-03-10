@@ -1,12 +1,4 @@
-Crear tarea
-Ver tarea
-Terminar programa
-Correr programa nuevamente
-Verificar si hay tareas guardadas
-Prueba exitosa
-ver tarea
-Vertarea
-VER TAREA
-VER tarea
-Refactorizar
-Borrar tarea
+mhbnd
+adfg
+yujm
+bnkl

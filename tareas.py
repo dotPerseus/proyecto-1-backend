@@ -30,13 +30,33 @@ def agregar_tarea(tareas):
         tareas.append(nueva_tarea)
         guardar_tarea(nueva_tarea)
         print("Tarea agregada correctamente.")
+
+def borrar_tarea(tareas):
+    indice = input("Escribe el número en la lista de la tarea que deseas borrar: ")
+
+    if not indice.isdigit():
+        print("Debes escribir un número.")
+        return
+    
+    indice = (int.indice)-1
+
+    if indice < 0 or indice >= len(tareas):
+        print("Número fuera de rango.")
+        return
+    
+    tareas.pop(indice)
+    
+    with open("tareas.txt", "w") as archivo:
+            archivo.write("\n".join(tareas))
+    print("Tarea borrada satisfactoriamente")
     
 
 def mostrar_menu():
     print("\n--- GESTOR DE TAREAS ---")
     print("1. Ver tareas")
     print("2. Agregar tarea")
-    print("3. Salir")
+    print("3. Borrar tarea")
+    print("4. Salir")
 
 tareas = cargar_tareas()
 
@@ -49,8 +69,11 @@ while True:
         
     elif opcion == "2":
         agregar_tarea(tareas)
-        
+
     elif opcion == "3":
+        borrar_tarea(tareas)
+        
+    elif opcion == "4":
         print("Saliendo del programa...")
         break
     else:
