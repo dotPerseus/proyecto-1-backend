@@ -9,3 +9,4 @@ Vertarea
 VER TAREA
 VER tarea
 Refactorizar
+Borrar tarea
